@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biografía de Jeff Bezos</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <img src="image/jeff_bezos.jpg" alt="Jeff Bezos" class="profile-pic">
-            <h1>Biografía de Jeff Bezos</h1>
+            <h1>Contacto</h1>
         </div>
     </header>
     <nav>
@@ -28,10 +27,19 @@
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
-    <section id="inicio" class="section">
+    <section id="contacto" class="section">
         <div class="container">
-            <h2>Inicio</h2>
-            <p>En esta pagina conoceras al empresario y magnate Jeff Bezos,su biografia,historia,logros y demas cosas de este empresario que marco una era.</p>
+            <h2>Contacto</h2>
+            <p>Si deseas ponerte en contacto con nosotros, por favor llena el siguiente formulario:</p>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
         </div>
     </section>
     <footer>
@@ -39,6 +47,15 @@
             <p>&copy; 2024 Biografía de Jeff Bezos. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                alert('Mensaje enviado. Gracias por contactarnos.');
+                form.reset();
+            });
+        });
+    </script>
 </body>
 </html>
-
